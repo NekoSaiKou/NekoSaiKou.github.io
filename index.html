@@ -11,9 +11,16 @@
 
 <body>
   <!-- 左側欄 -->
-  <div id = "leftbar" class="sidenav">
-    <a href="#" onclick="myFunction()">About</a>
-    <a href="https://github.com/NekoSaiKou" target="_blank">Contact</a>
+  <div class="sidenav">
+    <ul id = "first_layer">
+      <li> <a href="#" onclick="myFunction()">About</a></li>
+      <li> <a href="#">Contact</a>
+        <ul id = "second_layer">
+            <li><a href="https://github.com/NekoSaiKou" target="_blank">github</a></li>
+            <li><a href="https://www.facebook.com/nekosaikou.chengyeh" target="_blank">facebook</a></li>
+        </ul>
+      </li>
+    </ul>
     <img id="side_logo" src="images/logo.png" alt="">
     <script>
       function myFunction() {
@@ -21,7 +28,6 @@
       }
       </script>
   </div>
-
   <!-- 主要內容 -->
   <header>
     <h1>NekoSaiKou</h1>  

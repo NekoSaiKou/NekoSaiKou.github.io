@@ -21,13 +21,30 @@
         </ul>
       </li>
     </ul>
-    <img id="side_logo" src="images/logo.png" alt="">
+    <img id="side_logo" src="./images/logo.png" alt="1" onclick="changelogo()" style="cursor: pointer;">
     <script>
       function myFunction() {
-          alert("Not Yet");
+          alert("I think you should play with my cat.");
       }
-      </script>
+      function changelogo(){
+        var logo = document.getElementById("side_logo");
+        if(logo.alt == "1"){
+          logo.src="images/logo2.png";
+          logo.alt ="2";
+        }else{
+          logo.src="images/logo.png";
+          logo.alt ="1";
+        }
+      }
+    </script>
   </div>
+  
+  <!--上方欄-->
+  <div class="upper">
+      <div class="title">NekoSaiKou personal page</div>	
+      <div style="clear:both"></div>
+  </div>
+
   <!-- 主要內容 -->
   <header>
     <h1>NekoSaiKou</h1>  

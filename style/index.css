@@ -7,7 +7,8 @@ body {
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-size: cover;
-    padding-left: 15em;}
+    padding-left: 160px;
+}
 h1{
     color: purple; 
     font-family: "Times New Roman",Times, Georgia,serif;}
@@ -58,4 +59,21 @@ h1{
 .sidenav ul li:hover ul {
 	/* 觸動第一層時，顯示第二層 */
     visibility:visible;
+}
+/*upper menu*/
+.upper
+{
+	max-width:100%;
+	background-color:#0f384c;
+	margin:0 ;
+    border-radius: 10px;
+}
+.title
+{
+    float: left;
+	padding: 1% 0%;
+	font-size:50px;
+	font-weight:bold;
+	padding-left:3%;
+	color:#FBC654;
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" href="style/index.css">
+<link rel="stylesheet" href="style/MoonFestival.css">
 
 <head>
   <meta charset="utf-8">
@@ -9,45 +10,80 @@
   <title>Neko Homepage</title>
 </head>
 
-<body>
+
+<body onload="MFWelcome_msg()">
+  <!--Moon Festival Modal-->
+  <div id="MFModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal_content">
+      <span class="close">&times;</span>
+      <p>中秋節快樂 烤肉莫忘coding</p>
+      <img id="MF_BBQ" src="./images/BBQ.png" alt="MOON Festival" style="cursor: pointer; width: 160px;">
+    </div>
+  </div>
+
+  <script>
+    var modal = document.getElementById('MFModal');
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    function MFWelcome_msg() {
+      // Get the Moon Festival modal
+      modal.style.display = "block";
+    }
+  </script>
+
   <!-- 左側欄 -->
   <div class="sidenav">
-    <ul id = "first_layer">
-      <li> <a href="#" onclick="myFunction()">About</a></li>
-      <li> <a href="#">Contact</a>
-        <ul id = "second_layer">
-            <li><a href="https://github.com/NekoSaiKou" target="_blank">github</a></li>
-            <li><a href="https://www.facebook.com/nekosaikou.chengyeh" target="_blank">facebook</a></li>
+    <ul id="first_layer">
+      <li>
+        <a href="#" onclick="AboutMSG()">About</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+        <ul id="second_layer">
+          <li>
+            <a href="https://github.com/NekoSaiKou" target="_blank">github</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/nekosaikou.chengyeh" target="_blank">facebook</a>
+          </li>
         </ul>
       </li>
     </ul>
     <img id="side_logo" src="./images/logo.png" alt="1" onclick="changelogo()" style="cursor: pointer;">
     <script>
-      function myFunction() {
-          alert("I think you should play with my cat.");
+      function AboutMSG() {
+        alert("I think you should play with my cat.");
       }
-      function changelogo(){
+      function changelogo() {
         var logo = document.getElementById("side_logo");
-        if(logo.alt == "1"){
-          logo.src="images/logo2.png";
-          logo.alt ="2";
-        }else{
-          logo.src="images/logo.png";
-          logo.alt ="1";
+        if (logo.alt == "1") {
+          logo.src = "images/logo2.png";
+          logo.alt = "2";
+        } else {
+          logo.src = "images/logo.png";
+          logo.alt = "1";
         }
       }
     </script>
   </div>
-  
+
   <!--上方欄-->
   <div class="upper">
-      <div class="title">NekoSaiKou personal page</div>	
-      <div style="clear:both"></div>
+    <div class="title">Neko personal page</div>
+    <div style="clear:both"></div>
   </div>
 
   <!-- 主要內容 -->
   <header>
-    <h1>NekoSaiKou</h1>  
+    <h1>NekoSaiKou</h1>
   </header>
 
   <article>
@@ -59,4 +95,5 @@
   <!-- 簽名和日期 -->
   <address>2018年9月15日製作</address>
 </body>
+
 </html>

@@ -1,5 +1,5 @@
 body {
-    overflow: scroll;
+    overflow: auto;
     color: purple;
     font-family: "微軟正黑體","Times New Roman",Times, serif;
     background-image:url("https://i.imgur.com/7gDxms9.jpg");
@@ -11,18 +11,18 @@ body {
     padding-left: 160px;
 }
 h1{
-    color: purple; 
+    color: purple;
     font-family: "Times New Roman",Times, Georgia,serif;}
 /* The sidebar menu */
 .sidenav {
     color: #5f5f5f;
+    background-color: #111; /* Black */
     z-index: 1;
     height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 160px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #111; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
 }
@@ -55,22 +55,20 @@ h1{
 /* ---------- 隱藏與顯示階層 ---------- */
 .sidenav ul li ul {
 	/* 預先隱藏第二層 */
-	visibility:hidden;
+    display: none;
 }
 .sidenav ul li:hover ul {
 	/* 觸動第一層時，顯示第二層 */
-    visibility:visible;
+    display: block;
 }
 /*upper menu*/
-.upper
-{
+.upper{
 	background-color:#0f384c;
 	margin:0 ;
     border-radius: 10px;
     max-width:100%;
 }
-.title
-{
+.title{
     white-space: nowrap;
     float: left;
 	padding: 1% 0%;

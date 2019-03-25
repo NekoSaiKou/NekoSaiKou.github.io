@@ -1,5 +1,4 @@
 body {
-    overflow: auto;
     color: purple;
     font-family: "微軟正黑體","Times New Roman",Times, serif;
     background-image:url("https://i.imgur.com/7gDxms9.jpg");
@@ -8,72 +7,58 @@ body {
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-size: cover;
-    padding-left: 160px;
+    padding-left: 160px;/*for side bar*/
+    overflow:scroll;
 }
-h1{
-    color: purple;
-    font-family: "Times New Roman",Times, Georgia,serif;}
 /* The sidebar menu */
 .sidenav {
     color: #5f5f5f;
     background-color: #111; /* Black */
-    z-index: 1;
     height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 160px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     top: 0; /* Stay at the top */
-    left: 0;
-    overflow-x: hidden; /* Disable horizontal scroll */
+    left: 0;/* Stay at the left */
     padding-top: 20px;
 }
 /* The navigation menu links */
 .sidenav a {
+    color: #818181;
+    font-size: 25px;
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
     display: block;
 }
 /* When you mouse over the navigation links, change their color */
 .sidenav ul li:hover , .sidenav ul li a:hover {
-    background-color:rgb(34, 30, 30);
     color: #f1f1f1;
+    background-color:rgb(34, 30, 30);
 }
 .sidenav img{
-    width: 160px;
-    position: fixed;
-    bottom: 0;
+    bottom:0;
+    width: inherit;
 }
-/* ---------- 大小與定位 ---------- */
 .sidenav ul {
     /*取消ul符號樣式*/
     list-style-type:none;
-	/* 重設ul邊界與留白為零 */
 	margin:0;
 	padding:0;
 }
-/* ---------- 隱藏與顯示階層 ---------- */
 .sidenav ul li ul {
-	/* 預先隱藏第二層 */
-    display: none;
+	visibility:hidden;/* 預先隱藏第二層 */
 }
 .sidenav ul li:hover ul {
-	/* 觸動第一層時，顯示第二層 */
-    display: block;
+    visibility:visible;/* 觸動第一層時，顯示第二層 */
 }
 /*upper menu*/
 .upper{
-	background-color:#0f384c;
-	margin:0 ;
-    border-radius: 10px;
-    max-width:100%;
+    background-color:#0f384c;
+    width: 100%;
+    padding: 10px;
 }
 .title{
-    white-space: nowrap;
-    float: left;
-	padding: 1% 0%;
 	font-size:50px;
 	font-weight:bold;
-	padding-left:3%;
 	color:#FBC654;
 }
+
